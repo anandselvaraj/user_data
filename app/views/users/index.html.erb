@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+<!--%= button_to "New User",class: "btn btn-success", new_user_path%-->
+<%= link_to 'New User', new_user_path %>
+<div class="container">
+
+<h1 style="text-align: center;">User Details</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Username</th>
+      <th>Full name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>Role</th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.username %></td>
+        <td><%= user.full_name %></td>
+        <td><%= user.age %></td>
+        <td><%= user.address %></td>
+        <td><%= user.role %></td>
+        <td><%= link_to ('<i class="fa fa-eye"></i>').html_safe, user , class: "btn btn-info"%></td>
+        <td><%= link_to ('<i class="fa fa-edit"></i>').html_safe, edit_user_path(user), class: "btn btn-success" %></td>
+        <td><%= link_to ('<i class="fa fa-trash"></i>').html_safe, user, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>
+<br>
+
