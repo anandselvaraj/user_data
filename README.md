@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Getting Started
 
-Things you may want to cover:
+1. At the command prompt, Use blow link as given:
 
-* Ruby version
+        $ rails new user_data
 
-* System dependencies
+   where "myapp" is the application name.
 
-* Configuration
+2. Change directory to `myapp` and start the web server:
 
-* Database creation
+        $ cd user_data
+        $ bin/rails server
 
-* Database initialization
+   Run with `--help` or `-h` for options.
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+3. Go to `http://localhost:3000` and you'll see:
+"Yay! You’re on Rails!"
